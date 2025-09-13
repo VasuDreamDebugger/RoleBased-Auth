@@ -1,7 +1,7 @@
 const mongoose =require("mongoose");
 const express =require("express");
 
-const {registerUser}=require("../Controllers/Auth-controller.js")
+const {registerUser,loginUser}=require("../Controllers/Auth-controller.js")
 
 const router =express.Router();
 
@@ -9,7 +9,7 @@ const router =express.Router();
 
 router.post("/register", registerUser );
 
- 
+router.post("/login",loginUser);
 
 
 module.exports=router;
